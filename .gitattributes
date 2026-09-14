@@ -1,0 +1,2 @@
+# Preserve the byte-identical archived source snapshot, including its CRLF endings.
+data/raw/*.csv -text whitespace=-trailing-space
