@@ -1,0 +1,46 @@
+{
+  "analysis_type": "predictive_coursework",
+  "observation_unit": "laptop configuration",
+  "target": "listed price in the dataset's USD-denominated field",
+  "rows": 238,
+  "split": {
+    "train": 142,
+    "calibration": 48,
+    "test": 48,
+    "seed": 42
+  },
+  "missing_values": {
+    "CPU_core": 0,
+    "Screen_Size_inch": 4,
+    "CPU_frequency": 0,
+    "RAM_GB": 0,
+    "Storage_GB_SSD": 0,
+    "Weight_kg": 5
+  },
+  "selected_alpha": 1.0,
+  "five_fold_training_cv_rmse_usd": {
+    "0.1": 448.8749031079677,
+    "1.0": 444.18947933464267,
+    "10.0": 445.9053857502547,
+    "100.0": 474.4815264301544
+  },
+  "ridge_test": {
+    "rmse_usd": 397.16237214141165,
+    "mae_usd": 245.92364283369054,
+    "r2": 0.5827605440501661,
+    "mean_error_usd": 57.9585709738545,
+    "bootstrap_rmse_95_ci_usd": [
+      221.58116293399127,
+      606.4564639954461
+    ],
+    "empirical_90pct_interval_coverage": 0.9375,
+    "empirical_90pct_interval_half_width_usd": 599.6800816119529
+  },
+  "mean_baseline_test": {
+    "rmse_usd": 615.3586814786613,
+    "mae_usd": 439.30076291079814,
+    "r2": -0.0016265839686213646,
+    "mean_error_usd": -24.797828638497695
+  },
+  "nonclaim": "Performance on 48 held-out records does not establish accuracy for current or out-of-distribution laptop markets."
+}

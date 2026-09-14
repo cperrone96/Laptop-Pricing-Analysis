@@ -1,0 +1,10 @@
+{
+  "retrieved_utc": "2026-09-14",
+  "course": "IBM Data Analysis with Python coursework",
+  "dataset": "Laptop Pricing Dataset",
+  "observation_unit": "one laptop configuration",
+  "source_url": "https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DA0101EN-Coursera/laptop_pricing_dataset_base.csv",
+  "file": "raw/laptop_pricing_dataset_base.csv",
+  "sha256": "97bdec3a52154dde546d893b32f9ed14fb987aced5dd9c5c8294b94f1179f76f",
+  "license_note": "The file is distributed as an IBM Skills Network educational asset. No separate dataset license was bundled; verify reuse rights before redistribution outside this coursework context."
+}
