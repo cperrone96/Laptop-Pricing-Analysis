@@ -1,14 +1,7 @@
 {
-  "analysis_type": "predictive_coursework",
-  "observation_unit": "laptop configuration",
-  "target": "listed price in the dataset's USD-denominated field",
   "rows": 238,
-  "split": {
-    "train": 142,
-    "calibration": 48,
-    "test": 48,
-    "seed": 42
-  },
+  "spec_groups": 226,
+  "rows_sharing_specs_with_another_row": 24,
   "missing_values": {
     "CPU_core": 0,
     "Screen_Size_inch": 4,
@@ -17,30 +10,81 @@
     "Storage_GB_SSD": 0,
     "Weight_kg": 5
   },
-  "selected_alpha": 1.0,
-  "five_fold_training_cv_rmse_usd": {
-    "0.1": 448.8749031079677,
-    "1.0": 444.18947933464267,
-    "10.0": 445.9053857502547,
-    "100.0": 474.4815264301544
+  "price_usd": {
+    "median": 1333.0,
+    "min": 527.0,
+    "max": 3810.0
   },
-  "ridge_test": {
-    "rmse_usd": 397.16237214141165,
-    "mae_usd": 245.92364283369054,
-    "r2": 0.5827605440501661,
-    "mean_error_usd": 57.9585709738545,
-    "bootstrap_rmse_95_ci_usd": [
-      221.58116293399127,
-      606.4564639954461
-    ],
-    "empirical_90pct_interval_coverage": 0.9375,
-    "empirical_90pct_interval_half_width_usd": 599.6800816119529
+  "validation": "10 repeats x 5-fold grouped CV with inner grouped grid search (seed 42)",
+  "cv": {
+    "mean_baseline": {
+      "rmse_usd": {
+        "mean": 576.0644942069613,
+        "min": 574.4873564707243,
+        "max": 579.3881203301162
+      },
+      "mae_usd": {
+        "mean": 445.2185874755725,
+        "min": 443.6384549202553,
+        "max": 447.7629880243801
+      },
+      "r2": {
+        "mean": -0.009325969559518432,
+        "min": -0.02099802667094819,
+        "max": -0.0037988186040518457
+      }
+    },
+    "ridge": {
+      "rmse_usd": {
+        "mean": 405.9060627776062,
+        "min": 393.3074968457917,
+        "max": 419.5117157662146
+      },
+      "mae_usd": {
+        "mean": 291.865915282069,
+        "min": 281.9837827684758,
+        "max": 297.96849663065757
+      },
+      "r2": {
+        "mean": 0.4987426063395793,
+        "min": 0.46472874940717523,
+        "max": 0.529510235972168
+      }
+    },
+    "random_forest": {
+      "rmse_usd": {
+        "mean": 348.3024267875247,
+        "min": 336.0201319576416,
+        "max": 368.5162492384135
+      },
+      "mae_usd": {
+        "mean": 249.73453368069448,
+        "min": 239.57618451269397,
+        "max": 263.04814629185006
+      },
+      "r2": {
+        "mean": 0.6306705552085938,
+        "min": 0.5869534351036032,
+        "max": 0.6565873204333584
+      }
+    }
   },
-  "mean_baseline_test": {
-    "rmse_usd": 615.3586814786613,
-    "mae_usd": 439.30076291079814,
-    "r2": -0.0016265839686213646,
-    "mean_error_usd": -24.797828638497695
+  "best_model": "random_forest",
+  "conformal_interval": {
+    "model": "random_forest",
+    "split_rows": {
+      "train": 142,
+      "calibration": 48,
+      "test": 48
+    },
+    "nominal_coverage": 0.9,
+    "half_width_usd": 959.3699999999999,
+    "empirical_test_coverage": 0.9583333333333334,
+    "test_metrics": {
+      "rmse_usd": 462.89363956216977,
+      "mae_usd": 277.6417951388889,
+      "r2": 0.41001078440314964
+    }
   },
-  "nonclaim": "Performance on 48 held-out records does not establish accuracy for current or out-of-distribution laptop markets."
+  "ridge_alpha_full_data": 1.0
 }
