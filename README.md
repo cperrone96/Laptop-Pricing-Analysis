@@ -61,3 +61,7 @@ jupyter nbconvert --to notebook --execute --inplace laptop_pricing.ipynb
 - The source doesn't say when, where or how prices were collected, so the model describes this dataset, not today's market.
 - Several categories are tiny (one Razer, one Huawei, one Xiaomi), so their effects can't be estimated reliably.
 - Coefficients and feature effects are associations within this sample, not causal price effects.
+
+## License
+
+The code and analysis in this repository are released under the [MIT License](LICENSE). The laptop pricing dataset is an IBM Skills Network educational asset and isn't covered by the MIT License; see [`data/SOURCES.json`](data/SOURCES.json).
